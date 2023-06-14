@@ -37,12 +37,9 @@ class DBService {
   Future<void> writeToDB(List<UserModel> model) async {
     await openbox();
     await box!.addAll(model);
-    print(box!.keys);
-    
   }
 
   Future<void> openbox() async {
     box = await Hive.openBox<UserModel>("DB");
-    
   }
 }
