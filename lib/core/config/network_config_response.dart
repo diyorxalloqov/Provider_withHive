@@ -1,30 +1,30 @@
-import 'package:dio/dio.dart';
+// import 'package:dio/dio.dart';
 
-abstract class NetworkResponseConfig {
-  NetworkResponseConfig();
-}
+// abstract class NetworkResponseConfig {
+//   NetworkResponseConfig();
+// }
 
-class NetworkSuccesResponse<N> extends NetworkResponseConfig {
-  N model;
-  NetworkSuccesResponse(this.model);
-}
+// class NetworkSuccesResponse<N> extends NetworkResponseConfig {
+//   N model_Network;
+//   NetworkSuccesResponse(this.model_Network);
+// }
 
-class NetworkErrorResponse extends NetworkResponseConfig {
-  String error = '';
-  NetworkErrorResponse(this.error);
-}
+// class NetworkErrorResponse extends NetworkResponseConfig {
+//   String error = '';
+//   NetworkErrorResponse(this.error);
+// }
 
-class NetworkExeptionResponse extends NetworkResponseConfig {
-  DioException exception;
-  String messageForUser = '';
-  NetworkExeptionResponse(this.exception) {
-    if (exception.type == DioExceptionType.receiveTimeout ||
-        exception.type == DioExceptionType.connectionTimeout ||
-        exception.type == DioExceptionType.sendTimeout ||
-        exception.type == DioExceptionType.unknown) {
-      messageForUser = 'Iltimos Internetingini tekshiring';
-    } else {
-      messageForUser = exception.message.toString();
-    }
-  }
-}
+// class NetworkExeptionResponse extends NetworkResponseConfig {
+//   DioException exception;
+//   String messageForUser = '';
+//   NetworkExeptionResponse(this.exception) {
+//     if (exception.type == DioExceptionType.receiveTimeout ||
+//         exception.type == DioExceptionType.connectionTimeout ||
+//         exception.type == DioExceptionType.sendTimeout ||
+//         exception.type == DioExceptionType.unknown) {
+//       messageForUser = 'Iltimos Internetingini tekshiring';
+//     } else {
+//       messageForUser = exception.message.toString();
+//     }
+//   }
+// }
